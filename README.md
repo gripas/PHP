@@ -2,7 +2,8 @@
 Programa skirta studentams kaip pavyzdys, kuri C++ užduotį pakeičiama į PHP kalbą. 
 Taip pat šis darbas yra sukurtas taikant OOP.
 
-UŽDUOTIS
+       UŽDUOTIS
+
 Konkurse dalyvauja n dalyvių. Pirmasis dalyvis atliko užduotį per t1 minučių, antrasis – per t2,
 n-tasis – per tn. Parašykite programą, surandančią, kuris dalyvis įveikė užduotį lėčiausiai ir keliomis
 minutėmis jis buvo lėtesnis už visų dalyvių užduočių atlikimo laiko vidurkį, taip pat ir greičiausias dalyvis,
