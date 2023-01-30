@@ -21,9 +21,9 @@
 <div class="container">
 <br/>	
 <?php 
-	if (isset($_GET['reset'])) {
-		$ses = $_SESSION['kiekis'];
-		unset($ses);
+if (isset($_GET['reset'])) {
+	$ses = $_SESSION['kiekis'];
+	unset($ses);
 	}
 	$tit = new Duomenys($kiek,$laik);
 	print "<h2>".$tit->title()."</h2>";  
@@ -140,25 +140,25 @@
    public $k;
 	 public $vidurkis;
 
-	function __construct($kiek, $laikas) {
-      $this->kiek = $kiek; 
-	  $this->laikas = $laikas;
-    }
+   function __construct($kiek, $laikas) {
+        $this->kiek = $kiek; 
+	$this->laikas = $laikas;
+   }
 	  
 	function gautiKieki(){
-		  $n =$this->kiek;
-      $_SESSION['kiekis'] = $n;
-			$rezult = $n;
-		 return $rezult;
+		$n =$this->kiek;
+                $_SESSION['kiekis'] = $n;
+		$rezult = $n;
+		return $rezult;
 	}
 	 function gautiRezultatus(){
 		  
 		$dalyvio_laikas = $this->laikas;
 		$rezultatas = $dalyvio_laikas;
 		foreach($rezultatas as $rezult){
-            $k=$this->k;
-			$k=$k+1; // kiekis ++
-			print "".$k."-ojo dalyvio laikas: ".$rezult." min.<br>";	   
+                $k=$this->k;
+		$k=$k+1; // kiekis ++
+		print "".$k."-ojo dalyvio laikas: ".$rezult." min.<br>";	   
 	    }
 	 }
 	function ilgiausio_t(){
@@ -167,7 +167,7 @@
 		$max_val = max($rezultatas);
 		foreach($rezultatas as $rezult){
 			$k=$this->k;
-            $k=$k+1; // kiekis ++
+                        $k=$k+1; // kiekis ++
 			if ($rezult == $max_val){
 			$ilg=$k;
 			} 
@@ -180,28 +180,28 @@
 		$rezultatas = $dalyvio_laikas;
 		$min_val = min($rezultatas);
 		foreach($rezultatas as $rezult){
-            $k=$this->k;
-			$k=$k+1; // kiekis ++
-			if ($rezult == $min_val){
-			$greic=$k;
-			}
+                $k=$this->k;
+		$k=$k+1; // kiekis ++
+		if ($rezult == $min_val){
+		$greic=$k;
+		}
 		}	 
 		return $greic;
 	}
 	   
 	function max_t(){
-		$dalyvio_laikas = $this->laikas;
-		$rezultatas = $dalyvio_laikas;
-		$max_val = max($rezultatas);	
-		foreach($rezultatas as $rezult){
-      $k=$this->k;
-      $vidurkis=$this->vidurkis;
-			$k=$k+1; // kiekis ++
-			$vidurkis +=$rezult; // bendras laikas
-			$bendras_laikas=number_format ($vidurkis/$k, 0, ".", ","); // dalyvių bendras laiko vidurkis
-			  if ($rezult == $max_val) {
-				$max_laikas = $rezult;
-			} 
+	$dalyvio_laikas = $this->laikas;
+	$rezultatas = $dalyvio_laikas;
+	$max_val = max($rezultatas);	
+	foreach($rezultatas as $rezult){
+	$k=$this->k;
+	$vidurkis=$this->vidurkis;
+		$k=$k+1; // kiekis ++
+		$vidurkis +=$rezult; // bendras laikas
+		$bendras_laikas=number_format ($vidurkis/$k, 0, ".", ","); // dalyvių bendras laiko vidurkis
+		if ($rezult == $max_val) {
+			$max_laikas = $rezult;
+		} 
 		}
 		$maxv = $max_laikas-$bendras_laikas;	
 		return $maxv;
@@ -212,11 +212,11 @@
 		$dalyvio_laikas = $this->laikas;
 		$rezultatas = $dalyvio_laikas;
 		foreach($rezultatas as $rezult){
-      $k=$this->k;
-      $vidurkis=$this->vidurkis;
-			$k=$k+1; // kiekis ++
-			$vidurkis +=$rezult; // bendras laikas
-			$bendras_laikas=number_format ($vidurkis/$k, 0, ".", ","); // dalyvių bendras laiko vidurkis
+	        $k=$this->k;
+	        $vidurkis=$this->vidurkis;
+		$k=$k+1; // kiekis ++
+		$vidurkis +=$rezult; // bendras laikas
+		$bendras_laikas=number_format ($vidurkis/$k, 0, ".", ","); // dalyvių bendras laiko vidurkis
 		}
 		$vid = $bendras_laikas;	
 		return $vid;
