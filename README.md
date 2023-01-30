@@ -37,13 +37,13 @@ nth - through tn. Write a program that finds which participant completed the tas
 minutes, it was slower than the average of all participants' task times, as well as the fastest participant,
 print the average of all participants' tasks.
 
-    Check out:
+    Check:
    
-How many participants in the competition: 4
-What is the time of participant 1: 22
-What is the time of participant 2: 20
-What is the time of participant 3: 25
-What is the time of participant 4: 25
+	How many participants in the competition: 4
+	What is the time of participant 1: 22
+	What is the time of participant 2: 20
+	What is the time of participant 3: 25
+	What is the time of participant 4: 25	
 
     Participant 2 completed the task the shortest time.
    
